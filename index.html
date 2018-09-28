@@ -31,8 +31,8 @@
 }
 
 img {
-	width: 50%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 }
 
 </style>
@@ -98,6 +98,7 @@ d3.json(storymap_data, function(error, data) {
 			.text(function (d) { return d; })
 			.attr('id',function (d) { return d; });
 
+	// MENU
 	function addID(){
 		selectValue = d3.select('select').property('value')	
 		d3.select('#menu')
@@ -115,6 +116,7 @@ d3.json(storymap_data, function(error, data) {
 	    $("option").click(function(event) {
 	    	$("#img").empty();
 	    	x = d3.select('select').property('value')
+	    	// console.log(x)
 	    	for (let i of a){
 	    		tags = i.text.tags
 	    		if (tags.includes(x)) {
