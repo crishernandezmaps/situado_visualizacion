@@ -1,11 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 import numpy as np
 import pandas as pd
 import os
 from fnmatch import fnmatch
 from PIL import Image, ExifTags
-# from iptcinfo3 import IPTCInfo
-from iptcinfo import IPTCInfo
+from iptcinfo3 import IPTCInfo
 import sys
 import json
 
@@ -76,12 +75,12 @@ def produceJson(pathToFolder):
 			"slides": colection
 			}}
 
-			# Write JSON file
+			### Write JSON file
 			# with open(''.join([root,'/',pathToFolder.split('/')[-1],'.json']), 'w') as outfile:
-			with open('data/x.json', 'w') as outfile:
-				json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+			# with open('data/x.json', 'w') as outfile:
+			# 	json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
 
-			print json.dumps(data['storymap']['slides'])
+			print(json.dumps(data['storymap']['slides']))
 
 
 	except Exception:
@@ -89,7 +88,6 @@ def produceJson(pathToFolder):
 
 # Folder containing images in JPG format
 produceJson('imagenes') 
-# produceJson(r'../../imagenes/varas_mena/terreno')
 
 
 
