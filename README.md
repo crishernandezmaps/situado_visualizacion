@@ -19,13 +19,11 @@ Esta herramienta esta desarrollada en el lenguaje de programación [Python](http
 - Pandas
 - Fnmatch
 - PIL
-- IPTCInfo
+- IPTCInfo3
 - Json
 
 El objetivo de la herramienta es la lectura de las fotografías alojadas localmente en el computador del investigador, la extracción de la metadata tanto [Exif](https://es.wikipedia.org/wiki/Exchangeable_image_file_format) como [Iptc](https://iptc.org/standards/photo-metadata/).
 
 
-
-
 ---
-<a name="foot01">1</a>: Autoras(es): Carlos Lange, Michelle Cáceres, Cris Hernández.
+<a name="foot01">1</a>: Autoras(es): Michelle Cáceres, Carlos Lange, Cris Hernández.

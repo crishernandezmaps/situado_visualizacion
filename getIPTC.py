@@ -52,7 +52,7 @@ def produceJson(pathToFolder):
 			"date": dateTime,
 			"text": {
 			"headline": 'Catastro',
-			"text": ",".join(kw),
+			"text": 'Proyecto Fondecyt Situado 2018',
 			"tags": kw
 			},
 			"location": {
@@ -65,7 +65,7 @@ def produceJson(pathToFolder):
 			"media": {
 			"url": 'https://raw.githubusercontent.com/crishernandezmaps/imagenes/master/' + i.split('/')[-1],
 			"credit":'Santiago se Mueve',
-			"caption": 'Proyecto Fondecyt Situado 2018'
+			"caption": ''
 			}}
 
 			colection.append(o)
@@ -75,10 +75,10 @@ def produceJson(pathToFolder):
 			"slides": colection
 			}}
 
-			### Write JSON file
+			## Write JSON file
 			# with open(''.join([root,'/',pathToFolder.split('/')[-1],'.json']), 'w') as outfile:
-			# with open('data/x.json', 'w') as outfile:
-			# 	json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+			with open('data/x.json', 'w') as outfile:
+				json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
 
 			print(json.dumps(data['storymap']['slides']))
 
