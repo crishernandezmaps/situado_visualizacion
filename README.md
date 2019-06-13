@@ -24,6 +24,12 @@ Esta herramienta esta desarrollada en el lenguaje de programación [Python](http
 
 El objetivo de la herramienta es la lectura de las fotografías alojadas localmente en el computador del investigador, la extracción de la metadata tanto [Exif](https://es.wikipedia.org/wiki/Exchangeable_image_file_format) como [Iptc](https://iptc.org/standards/photo-metadata/).
 
+---
+## Para instalar IPTCinfo3
+1. Descargar o clonar repo https://github.com/crccheck/iptcinfo3
+2. cd en iptcinfo3
+3. Modificar iptcinfo3.py y setup.py por el shebang adecuado para Python3: #!/usr/bin/env python3
+4. Finalmente python3 setup.py install
 
 ---
 <a name="foot01">1</a>: Autoras(es): Michelle Cáceres, Carlos Lange, Cris Hernández.

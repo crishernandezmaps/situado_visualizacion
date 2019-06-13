@@ -1,0 +1,145 @@
+{
+    "storymap": {
+        "slides": [
+            {
+                "date": "2018-06-21",
+                "location": {
+                    "lat": -33.51246,
+                    "line": false,
+                    "lon": -70.63543333333334,
+                    "name": "img-in/otras/IMG_20180411_180115.jpg",
+                    "zoom": 19
+                },
+                "media": {
+                    "caption": "Proyecto Fondecyt Situado 2018",
+                    "credit": "Santiago se Mueve",
+                    "url": "../img-in/otras/IMG_20180411_180115.jpg"
+                },
+                "text": {
+                    "headline": "",
+                    "tags": [
+                        "balaceras",
+                        "balas",
+                        "barrera",
+                        "cancha el huasco",
+                        "carro de feria",
+                        "comprar",
+                        "cuidarse",
+                        "disparar",
+                        "drogas",
+                        "enfrentarse",
+                        "espacio publico",
+                        "feria",
+                        "feriantes",
+                        "intercambiar",
+                        "narcotraficantes",
+                        "narcotrafico",
+                        "negociar",
+                        "proteccion",
+                        "protegerse",
+                        "trafico",
+                        "trafico de drogas",
+                        "varas mena",
+                        "vecinas",
+                        "vecinos",
+                        "vender"
+                    ],
+                    "text": ""
+                }
+            },
+            {
+                "date": "2018-07-18",
+                "location": {
+                    "lat": -33.511041666666664,
+                    "line": false,
+                    "lon": -70.62945333333333,
+                    "name": "img-in/otras/IMG_20180404_171636.jpg",
+                    "zoom": 19
+                },
+                "media": {
+                    "caption": "Proyecto Fondecyt Situado 2018",
+                    "credit": "Santiago se Mueve",
+                    "url": "../img-in/otras/IMG_20180404_171636.jpg"
+                },
+                "text": {
+                    "headline": "",
+                    "tags": [
+                        "club de fútbol palestino",
+                        "deporte",
+                        "escuelas de futbol",
+                        "juventud",
+                        "parque la castrina"
+                    ],
+                    "text": ""
+                }
+            },
+            {
+                "date": "2018-06-27",
+                "location": {
+                    "lat": -33.51027166666667,
+                    "line": false,
+                    "lon": -70.624275,
+                    "name": "img-in/otras/VM-03042018-201808.jpg",
+                    "zoom": 19
+                },
+                "media": {
+                    "caption": "Proyecto Fondecyt Situado 2018",
+                    "credit": "Santiago se Mueve",
+                    "url": "../img-in/otras/VM-03042018-201808.jpg"
+                },
+                "text": {
+                    "headline": "",
+                    "tags": [
+                        "arboles",
+                        "centro cultural",
+                        "centros culturales",
+                        "cuidar",
+                        "evento",
+                        "familias",
+                        "juegos",
+                        "niños",
+                        "noche",
+                        "plaza frontis centro cultural",
+                        "reunir",
+                        "varas mena"
+                    ],
+                    "text": ""
+                }
+            },
+            {
+                "date": "2018-06-04",
+                "location": {
+                    "lat": -33.487723333333335,
+                    "line": false,
+                    "lon": -70.72213833333333,
+                    "name": "img-in/otras/02-A41.jpg",
+                    "zoom": 19
+                },
+                "media": {
+                    "caption": "Proyecto Fondecyt Situado 2018",
+                    "credit": "Santiago se Mueve",
+                    "url": "../img-in/otras/02-A41.jpg"
+                },
+                "text": {
+                    "headline": "",
+                    "tags": [
+                        "Area Verde",
+                        "Basurero",
+                        "Circulaciones",
+                        "Escaño",
+                        "Juegos de niños",
+                        "Luminaria",
+                        "Maquina ejercicios",
+                        "Pérgola",
+                        "Zona de Maquinas Ejercicio",
+                        "Zona de Niños",
+                        "acceso universal",
+                        "bolardos",
+                        "plaza folcklore religioso"
+                    ],
+                    "text": ""
+                }
+            }
+        ]
+    }
+}

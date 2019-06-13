@@ -8,13 +8,13 @@ from iptcinfo3 import IPTCInfo
 import sys
 import json
 
-
 def produceJson(pathToFolder):
+	outing = 'img-out/'
 	try:
-
 		### Get paths to images
 		root = pathToFolder
 		pattern = "*.jpg"
+		# pattern = "*.jpeg"
 		images = []
 
 		for path, subdirs, files in os.walk(root):
@@ -23,7 +23,7 @@ def produceJson(pathToFolder):
 					images.append(os.path.join(path, name))
 
 		colection = []
-
+		
 		for i in images:
 			a = Image.open(i)
 			exif = { ExifTags.TAGS[k]: v for k, v in a._getexif().items() if k in ExifTags.TAGS }
@@ -51,8 +51,8 @@ def produceJson(pathToFolder):
 			o = {
 			"date": dateTime,
 			"text": {
-			"headline": 'Catastro',
-			"text": 'Proyecto Fondecyt Situado 2018',
+			"headline": '',
+			"text": '',
 			"tags": kw
 			},
 			"location": {
@@ -63,9 +63,10 @@ def produceJson(pathToFolder):
 			"line": False
 			},
 			"media": {
-			"url": 'https://raw.githubusercontent.com/crishernandezmaps/imagenes/master/' + i.split('/')[-1],
+			"url": '../' + pathToFolder + i.split('/')[-1],
+			# "url": pathToFolder + i.split('/')[-1],
 			"credit":'Santiago se Mueve',
-			"caption": ''
+			"caption": 'Proyecto Fondecyt Situado 2018'
 			}}
 
 			colection.append(o)
@@ -74,20 +75,36 @@ def produceJson(pathToFolder):
 			"storymap": {
 			"slides": colection
 			}}
-
-			## Write JSON file
-			# with open(''.join([root,'/',pathToFolder.split('/')[-1],'.json']), 'w') as outfile:
-			with open('data/x.json', 'w') as outfile:
+			
+			# Write JSON file
+			sufx = pathToFolder.split('/')[1]
+			name = ''.join([outing,sufx,'.json'])
+			with open(name, 'w') as outfile:
 				json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
 
 			print(json.dumps(data['storymap']['slides']))
 
-
 	except Exception:
 		pass
 
-# Folder containing images in JPG format
-produceJson('imagenes') 
+### Folder containing images in JPG format
+## Varas Mena ##
+catatroVarasMena = 'img-in/catastroVarasMena/'
+terrenoVarasMena = 'img-in/terrenoVarasMena/'
+## Villa La Reina ##
+catastroVillaLaReina = 'img-in/catastroVillaLaReina/'
+terrenoVillaLaReina = 'img-in/terrenoVillaLaReina/'
+## Otras ## 
+otras = 'img-in/otras/'
+## Test desde Apps ##
+test = '/img-in/test_invi/'
 
+### Calling function
+# produceJson(catatroVarasMena)
+# produceJson(terrenoVarasMena)
+# produceJson(catastroVillaLaReina) # No Tags !!! 
+# produceJson(terrenoVillaLaReina)
+# produceJson(otras)
+produceJson(test)
 
-
+# import code; code.interact(local=dict(globals(), **locals()))
