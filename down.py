@@ -8,7 +8,6 @@ from iptcinfo3 import IPTCInfo
 from geojson import Point, Feature, FeatureCollection, dump
 
 route2folderWithImages = sys.argv[1]
-# '/Users/tremen/Documents/past_projects/invi/img-in/terrenoVarasMena'
 
 pwd2root = os.getcwd()
 
@@ -17,7 +16,6 @@ timeStamp = d.split(' ')[0].strip()
 
 def getFileWithExt(extension,path2Folder):
     cd = os.chdir(path2Folder)
-    print(cd)
     filesEXT = []
     ext = ''.join(['*.',extension])
     for f in glob.glob(ext):
@@ -34,17 +32,9 @@ def downSize():
             foo.save(''.join([toSaveImages,'/',i]),optimize=True,quality=95) # From 1.9GB to 8.8MB ... nice!
             print(i + ' is done!')
         except:
-            print('... already done!!!')
-            pass
+            print(i + '... is already done!!!')
+            pass   
 
-    # toSaveImages = ''.join([os.getcwd(),'/',smallImagestoday])
-    # os.chdir(toSaveImages)
-    # route2folderSmallImages = os.getcwd()
-    # listOfSmallImages = getFileWithExt('jpg',route2folderSmallImages)
-    # for j in listOfSmallImages:
-    #     print(j)    
-
-    
     ### creating a folder to save our final data ###
     smallImagestoday = ''.join(['smallImages_',timeStamp])
     if(os.path.isdir(smallImagestoday)):
@@ -84,10 +74,10 @@ def downSize():
                     "coordinates": [lon,lat]
                 },
                 "properties": {
-                    "name": "epsg:32719",
+                    "name": i,
                     "date": dateTime,
                     "tags": kw,
-                    "url": i,
+                    "url": ''.join([smallImagestoday,'/',i]),
                     "author": "Made by Cris Hernandez for FONDECYT Nº 1171554, INVI - U. of Chile, 2018/9"
                 }
             } 
@@ -98,22 +88,13 @@ def downSize():
 
     data = {
         "type": "FeatureCollection",
-        "crs": {
-            "type": "name",
-            "properties": {
-                "name": "epsg:32719"
-            }
-        },
         "features": collection
     }
 
     ### Saving GeoJson ###
     name = ''.join([pwd2root,'/',smallImagestoday,'/',route2folderWithImages.split('/')[-1],'_',timeStamp,'.geojson'])
-
     with open(name, 'w') as f:
-        dump(data, f)    
-    # with open('test.json', 'w') as outfile:
-    #     json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)    
+        dump(data, f)        
     
     print(data)
     print('All Done :)...')
