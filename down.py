@@ -77,7 +77,7 @@ def downSize():
                     "name": i,
                     "date": dateTime,
                     "tags": kw,
-                    "url": ''.join([smallImagestoday,'/',i]),
+                    "image": ''.join([smallImagestoday,'/',i]),
                     "author": "Made by Cris Hernandez for FONDECYT Nº 1171554, INVI - U. of Chile, 2018/9"
                 }
             } 
@@ -103,3 +103,8 @@ def downSize():
 if __name__ == "__main__":
     downSize()
     pass
+
+
+'''
+"https://live.staticflickr.com/2307/2105991752_cc151b3190_z.jpg"
+'''
