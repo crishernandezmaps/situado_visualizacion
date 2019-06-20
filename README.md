@@ -27,9 +27,10 @@ El objetivo de la herramienta es la lectura de las fotografías alojadas localme
 ---
 ## Para instalar IPTCinfo3
 1. Descargar o clonar repo https://github.com/crccheck/iptcinfo3
-2. cd en iptcinfo3
-3. Modificar iptcinfo3.py y setup.py por el shebang adecuado para Python3: #!/usr/bin/env python3
-4. Finalmente python3 setup.py install
+2. Para evitar los numerosos Warning (si esto ocurriera): https://stackoverflow.com/questions/50407738/python-disable-iptcinfo-warning (opcional)
+3. cd en iptcinfo3
+4. Modificar iptcinfo3.py y setup.py por el shebang adecuado para Python3: #!/usr/bin/env python3
+5. Finalmente python3 setup.py install
 
 ---
-<a name="foot01">1</a>: Autoras(es): Michelle Cáceres, Carlos Lange, Cris Hernández.
+<a name="foot01">1</a>: Autor: [Cris Hernández](http://crishernandez.co).

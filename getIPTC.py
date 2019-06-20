@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+
+'''
+Things to:
+0.- Read original images from a folder outside the project (OK)
+1.- Reduce the size of the images and save them on a folder inside the project (OK)
+2.- Improve IPTC info or use a different library ()
+3.- Improve the resultant Json (GeoJson? ShapeFile?) ()
+4.- Improve visualization (Grid) ()
+5.- Create an app for this (they dont know a shit about programming) ()
+'''
+
 import numpy as np
 import pandas as pd
 import os
@@ -14,7 +25,6 @@ def produceJson(pathToFolder):
 		### Get paths to images
 		root = pathToFolder
 		pattern = "*.jpg"
-		# pattern = "*.jpeg"
 		images = []
 
 		for path, subdirs, files in os.walk(root):
@@ -22,6 +32,7 @@ def produceJson(pathToFolder):
 				if fnmatch(name, pattern):
 					images.append(os.path.join(path, name))
 
+		# import code; code.interact(local=dict(globals(), **locals())) # ///////////////
 		colection = []
 		
 		for i in images:
@@ -45,6 +56,7 @@ def produceJson(pathToFolder):
 			info = IPTCInfo(i)
 			kw = [] 
 
+			import code; code.interact(local=dict(globals(), **locals()))
 			for x in info['keywords']:
 				kw.append(x.decode("utf-8") )
 
@@ -64,7 +76,6 @@ def produceJson(pathToFolder):
 			},
 			"media": {
 			"url": '../' + pathToFolder + i.split('/')[-1],
-			# "url": pathToFolder + i.split('/')[-1],
 			"credit":'Santiago se Mueve',
 			"caption": 'Proyecto Fondecyt Situado 2018'
 			}}
@@ -76,10 +87,13 @@ def produceJson(pathToFolder):
 			"slides": colection
 			}}
 			
+			import code; code.interact(local=dict(globals(), **locals()))
 			# Write JSON file
 			sufx = pathToFolder.split('/')[1]
-			name = ''.join([outing,sufx,'.json'])
-			with open(name, 'w') as outfile:
+			# name = ''.join([outing,sufx,'.json'])
+			name = ''.join([outing,sufx,'_test','.geojson'])
+
+			with open(name_test, 'w') as outfile:
 				json.dump(data, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
 
 			print(json.dumps(data['storymap']['slides']))
@@ -89,22 +103,14 @@ def produceJson(pathToFolder):
 
 ### Folder containing images in JPG format
 ## Varas Mena ##
-catatroVarasMena = 'img-in/catastroVarasMena/'
+catatroVarasMena = '..img-in/catastroVarasMena/'
 terrenoVarasMena = 'img-in/terrenoVarasMena/'
 ## Villa La Reina ##
-catastroVillaLaReina = 'img-in/catastroVillaLaReina/'
 terrenoVillaLaReina = 'img-in/terrenoVillaLaReina/'
-## Otras ## 
-otras = 'img-in/otras/'
-## Test desde Apps ##
-test = '/img-in/test_invi/'
 
 ### Calling function
-# produceJson(catatroVarasMena)
-# produceJson(terrenoVarasMena)
-# produceJson(catastroVillaLaReina) # No Tags !!! 
-# produceJson(terrenoVillaLaReina)
-# produceJson(otras)
-produceJson(test)
+produceJson(catatroVarasMena)
+produceJson(terrenoVarasMena)
+produceJson(terrenoVillaLaReina)
 
 # import code; code.interact(local=dict(globals(), **locals()))
