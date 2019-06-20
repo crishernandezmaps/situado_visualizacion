@@ -81,7 +81,7 @@ def downSize():
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [lat, lon]
+                    "coordinates": [lon,lat]
                 },
                 "properties": {
                     "name": "epsg:32719",
