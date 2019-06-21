@@ -77,7 +77,7 @@ def downSize():
                     "name": i,
                     "date": dateTime,
                     "tags": kw,
-                    "image": ''.join([smallImagestoday,'/',i]),
+                    "image": ''.join(['https://github.com/crishernandezmaps/situado_visualizacion/blob/gh-pages/',smallImagestoday,'/',i]),
                     "author": "Made by Cris Hernandez for FONDECYT Nº 1171554, INVI - U. of Chile, 2018/9"
                 }
             } 
@@ -106,5 +106,5 @@ if __name__ == "__main__":
 
 
 '''
-"https://live.staticflickr.com/2307/2105991752_cc151b3190_z.jpg"
+https://github.com/crishernandezmaps/situado_visualizacion/blob/gh-pages/smallImages_2019-06-20/IMG_20180319_162715.jpg 
 '''
