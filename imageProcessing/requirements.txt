@@ -1,0 +1,5 @@
+numpy==1.15.2
+pandas==0.23.4
+geojson==2.4.1
+IPTCInfo3==2.0.2
+Pillow==6.0.0
