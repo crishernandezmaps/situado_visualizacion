@@ -77,7 +77,7 @@ def downSize():
                     "name": i,
                     "date": dateTime,
                     "tags": kw,
-                    "image": ''.join(['https://github.com/crishernandezmaps/situado_visualizacion/blob/gh-pages/',smallImagestoday,'/',i]),
+                    "image": ''.join(['https://github.com/crishernandezmaps/situado_visualizacion/blob/gh-pages/',smallImagestoday,'/',i,'?raw=true']),
                     "author": "Made by Cris Hernandez for FONDECYT Nº 1171554, INVI - U. of Chile, 2018/9"
                 }
             } 
